@@ -4,10 +4,15 @@ from setuptools import find_packages
 from setuptools import setup
 
 DOCS_PATH = Path(__file__).parents[0] / "docs/README.md"
+
 PATH = Path("README.md")
+
 if not PATH.exists():
+    #
     with open(DOCS_PATH, encoding="utf-8") as f1:
+        #
         with open(PATH, "w+", encoding="utf-8") as f2:
+            #
             f2.write(f1.read())
 
 setup(
